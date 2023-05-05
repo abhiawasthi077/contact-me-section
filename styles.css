@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@900&family=Poppins:ital,wght@1,200&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+section{
+    position: relative;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background:  #35AF58;
+}
+section::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background:#fff38e;
+}
+.container{
+    position: relative;
+    min-width: 1100px;
+    min-height: 550px;
+    display: flex;
+    z-index: 1000;
+    background: #fff;
+}
+.contactinfo{
+    position: absolute;
+    top: 40px;
+    bottom: 40px;
+    width: 350px;
+    height: calc(100%-80px);
+    background:  #35AF58;
+    z-index: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-between;
+}
+h2{
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+}
+.info{
+    position: relative;
+    margin: 20px 0;
+}
+li{
+    position: relative;
+    display: flex;
+    margin: 20px 0;
+    cursor: pointer;
+    align-items: flex-start;
+}
+span:nth-child(1){
+    width: 30px;
+    min-width: 30px;
+   
+}
+span:nth-child(2){
+    color: #fff;
+    margin-left: 10px;
+    font-weight: 300;
+
+}
+img{
+    max-width: 100%;
+    filter: invert(1);
+    opacity: 0.5;
+
+}
+.icons{
+    position: relative;
+    display: flex;
+}
+ul.icons li{
+    list-style: none;
+    margin-right: 40px;
+}
+li a img{
+    width: 30px;
+    min-width: 30px;
+   
+    
+}
+li:hover a img{
+
+    opacity: 1;
+
+}
+
+.contact-form{
+    position: absolute;
+    padding: 70px 50px;
+    background: #fff;
+    margin-left: 150px;
+    padding-left: 250px;
+    width: calc(100%-150px);
+    height: 100%;
+
+}
+.contact-form h2{
+    color:#35AF58;
+    
+    font-size: 24px;
+    font-weight: 500;
+}
+p{
+    color:  #35AF58;
+    
+}
+.formbox{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+.inputbox{
+    position: relative;
+    margin-bottom: 35px;
+}
+.wmax{
+    width: 47%;
+}
+.wmax1{
+    width: 100%;
+}
+.inputbox input,
+.inputbox textarea{
+
+    width: 100%;
+    resize: none;
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: #333;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid#777;
+    
+}
+textarea{
+    height: 120px;
+}
+.inputbox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    pointer-events: none;
+    font-size: 18px;
+    font-weight: 300;
+    transition: 0.3s;
+    color: #333;
+
+}
+.inputbox input:focus ~ span,
+.inputbox input:valid ~ span,
+.inputbox textarea:focus ~ span,
+.inputbox textarea:focus ~ span{
+    transform: translateY(-20px);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #35AF58;
+    font-weight: 500;
+}
+
+.inputbox input[type="submit"]{
+    position: relative;
+    cursor: pointer;
+    background: #35AF58;
+    color: #fff;
+    border: none;
+    max-width: 150px;
+    padding: 12px;
+}
+.inputbox input[type="submit"]:hover{
+    background: #0d9480;
+}
+
+/* media queries */
+@media (max-width:1200px)
+{
+    .container{
+        width: 90%;
+        min-width: auto;
+        margin: 20px;
+    }
+    .contactinfo{
+        top: 0;
+        height: 500px;
+        position: relative;
+        box-shadow: none;
+    }
+    .contact-form{
+        position: relative;
+        width: calc(100%-350px);
+        padding-left: 0;
+        margin-left: 0;
+        padding: 40px;
+        height: 550px;
+        box-shadow: none;
+
+    }
+}
+@media (max-width:991px)
+{
+    section{
+        background: #fff38e;
+    }
+    section::before{
+        display: none;
+    }
+    .container{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .contact-form{
+        width: 100%;
+        height: auto;
+    }
+    .contactinfo{
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+    }
+    ul.icon{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media (max-width:991px){
+    .contact-form{
+        padding: 25px;
+    }
+    .contactinfo{
+        padding: 25px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    ul.icon{
+        margin-top: 40px;
+    }
+    .wmax{
+        width: 100%;
+    }
+}
